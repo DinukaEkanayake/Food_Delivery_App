@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delievery/home/main_food_page.dart';
+import 'package:food_delievery/screens/home/main_food_page.dart';
 
 void main() => runApp(
   DevicePreview(
