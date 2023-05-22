@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delievery/widgets/AppIcon.dart';
+import 'package:food_delievery/widgets/expandable_text.dart';
 
 import '../../widgets/big_text.dart';
 import '../../widgets/icon_and_text_widget.dart';
@@ -13,6 +14,7 @@ class PopularFoodDetail extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          //image
           Positioned(
               left: 0,
               right: 0,
@@ -29,6 +31,7 @@ class PopularFoodDetail extends StatelessWidget {
                 ),
               ),
           ),
+          //icon widgets
           Positioned(
             top: 60,
             left: 20,
@@ -41,6 +44,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //intro
           Positioned(
               left: 0,
               right: 0,
@@ -90,7 +94,9 @@ class PopularFoodDetail extends StatelessWidget {
                       ],
                     ),
                       SizedBox(height: 20),
-                      BigText(text: "Introduce")
+                      BigText(text: "Introduce"),
+                      SizedBox(height: 20),
+                      Expanded(child: SingleChildScrollView(child: ExpandableText(text: "Beijing Roasted Duck Peking duck (北京烤鸭 Běijīng kǎoyā) is a famous dish from Beijing, enjoying world fame, and considered as one of China national dishes. Peking duck is savored for its thin and crispy skin. Sliced Peking duck is often eaten with pancakes, sweet bean sauce, or soy sauce with mashed garlic. It is a must-taste dish in Beijing! As “the first dish to taste in China”, Beijing Roast Duck used to be a royal dish in medieval China. It has been a “national dish of diplomacy” since the 1970s, when it was first used for the reception of foreign guests by Premier Zhou Enlai (the first Premier of the People's Republic of China). It is highly praised by heads of state, government officials, and domestic and foreign tourists.")))
                     ],
                   )
 
