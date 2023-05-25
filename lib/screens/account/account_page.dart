@@ -4,7 +4,6 @@ import 'package:food_delievery/widgets/AppIcon.dart';
 import 'package:food_delievery/widgets/account_widget.dart';
 
 import '../../widgets/big_text.dart';
-import '../../widgets/bottom_navigation_bar.dart';
 
 class AccountPage extends StatelessWidget {
   const AccountPage({Key? key}) : super(key: key);
