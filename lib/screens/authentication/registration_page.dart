@@ -192,7 +192,7 @@ class SignupPage extends StatelessWidget {
           SizedBox(height: 10,),
           RichText(text: TextSpan(
             recognizer: TapGestureRecognizer()..onTap=()=>Get.back(),
-            text: "Already HAve An Account?",
+            text: "Already Have An Account?",
             style: TextStyle(
               color: Colors.grey,
               fontSize: 20
