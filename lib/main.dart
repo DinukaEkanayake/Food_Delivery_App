@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delievery/screens/account/account_page.dart';
 import 'package:food_delievery/screens/authentication/registration_page.dart';
 import 'package:food_delievery/screens/authentication/sign_in_page.dart';
+import 'package:food_delievery/screens/cart/cart_page.dart';
 import 'package:food_delievery/screens/food/popular_food_detail.dart';
 import 'package:food_delievery/screens/food/recommended_food_detail.dart';
 import 'package:food_delievery/screens/home/food_page_body.dart';
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
       //MainFoodPage()
       //AccountPage()
       //SignInPage()
-      SignupPage()
+      //SignupPage()
+      CartPage()
     );
   }
 }

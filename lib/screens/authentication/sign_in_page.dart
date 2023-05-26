@@ -35,7 +35,7 @@ class SignInPage extends StatelessWidget {
           ),
           RichText(text: TextSpan(
               recognizer: TapGestureRecognizer()..onTap=()=>Get.back(),
-              text: "Welcome to AppleStore",
+              text: "Welcome to FastFood",
               style: TextStyle(
                   color: Colors.grey,
                   fontSize: 20

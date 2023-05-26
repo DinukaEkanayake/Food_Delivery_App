@@ -19,106 +19,106 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
-        children:[ Container(
-          //color: Colors.red,
-          height: 320,
-          child: PageView.builder(
-              controller: pageController,
-              itemCount: 5,
-              itemBuilder: (context,position){
-                return _buildPageItem(position);
-            }),
-        ),
-                    new DotsIndicator(
-                    dotsCount: 5,
-                    position: 0,//currpgevalue
-                    decorator: DotsDecorator(
-                    size: const Size.square(9.0),
-                    activeSize: const Size(18.0, 9.0),
-                    activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-      ),
-      ),
-                   SizedBox(height: 30),
-          Container(
-            margin: EdgeInsets.only(left: 30),
-            child: Row(
-              children: [
-                BigText(text: "Popular"),
-                SizedBox(width: 10),
-                Container(
-                  child: SmallText(text: "Food Pairing"),
-                )
-              ],
-            ),
+          children:[ Container(
+            //color: Colors.red,
+            height: 320,
+            child: PageView.builder(
+                controller: pageController,
+                itemCount: 5,
+                itemBuilder: (context,position){
+                  return _buildPageItem(position);
+              }),
           ),
-          //list of food and images
-          Container(
-            height: 500,
-            child: ListView.builder(
-                //physics: NeverScrollableScrollPhysics(),
-                //shrinkWrap: true,
-                itemCount: 10,
-                itemBuilder: (context,index){
+                      DotsIndicator(
+                      dotsCount: 5,
+                      position: 0,//currpgevalue
+                      decorator: DotsDecorator(
+                      size: const Size.square(9.0),
+                      activeSize: const Size(18.0, 9.0),
+                      activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+        ),
+        ),
+                     SizedBox(height: 30),
+            Container(
+              margin: EdgeInsets.only(left: 30),
+              child: Row(
+                children: [
+                  BigText(text: "Popular"),
+                  SizedBox(width: 10),
+                  Container(
+                    child: SmallText(text: "Food Pairing"),
+                  )
+                ],
+              ),
+            ),
+            //list of food and images
+            Container(
+              height: 500,
+              child: ListView.builder(
+                  //physics: NeverScrollableScrollPhysics(),
+                  //shrinkWrap: true,
+                  itemCount: 10,
+                  itemBuilder: (context,index){
 
-                  return Container(
-                    margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
-                    child: Row(
-                      children: [
-                        //image section
-                        Container(
-                          width:120,
-                          height: 120,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white,
-                            image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/list1.jpg"
-                                )
-                            )
-                          ),
-                        ),
-                        //text section
-                        Expanded(
-                          child: Container(
-                            height:100,
+                    return Container(
+                      margin: EdgeInsets.only(left: 20,right: 20,bottom: 10),
+                      child: Row(
+                        children: [
+                          //image section
+                          Container(
+                            width:120,
+                            height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Colors.white54,
-                            ),
-                            child: Padding(padding: EdgeInsets.only(left: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  BigText(text: "Nutritious Food"),
-                                  SizedBox(height: 10),
-                                  SmallText(text: "with chineese flavours"),
-                                  SizedBox(height: 10),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      IconAndText(icon: Icons.circle_sharp, text: "Normal", color: Colors.grey, iconColor: Colors.yellow),
-                                      //SizedBox(width: 10),
-                                      IconAndText(icon: Icons.location_on, text: "Location", color: Colors.grey, iconColor: Colors.green),
-                                      //SizedBox(width: 10),
-                                      IconAndText(icon: Icons.access_time_rounded, text: "Time", color: Colors.grey, iconColor: Colors.orange),
-                                    ],
+                              color: Colors.white,
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    "assets/list1.jpg"
                                   )
-                                ],
+                              )
+                            ),
+                          ),
+                          //text section
+                          Expanded(
+                            child: Container(
+                              height:100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.white54,
+                              ),
+                              child: Padding(padding: EdgeInsets.only(left: 10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    BigText(text: "Nutritious Food"),
+                                    SizedBox(height: 10),
+                                    SmallText(text: "with chineese flavours"),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        IconAndText(icon: Icons.circle_sharp, text: "Normal", color: Colors.grey, iconColor: Colors.yellow),
+                                        //SizedBox(width: 10),
+                                        IconAndText(icon: Icons.location_on, text: "Location", color: Colors.grey, iconColor: Colors.green),
+                                        //SizedBox(width: 10),
+                                        IconAndText(icon: Icons.access_time_rounded, text: "Time", color: Colors.grey, iconColor: Colors.orange),
+                                      ],
+                                    )
+                                  ],
+                                ),
+
                               ),
 
                             ),
-
                           ),
-                        ),
-                      ],
-                    ),
-                  );
-      }),
-          )
-      ],
-      );
+                        ],
+                      ),
+                    );
+        }),
+            )
+        ],
+        );
   }
 
   Widget _buildPageItem(int index){
